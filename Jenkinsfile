@@ -40,11 +40,11 @@ podTemplate(
         }
         
         stage("Deploy to test environment") {
-            deployToEB('test')
+            deployToEB('testing')
         }
         
         stage("Integration test to test environment") {  
-            smokeTest('test')
+            smokeTest('testing')
         }
         
         stage("Deploy to staging environment") {
@@ -56,7 +56,7 @@ podTemplate(
         }
         
         stage("Deploy to production environment") {
-            deployToEB('production')
+            deployToEB('prod')
         }
     }
   }
